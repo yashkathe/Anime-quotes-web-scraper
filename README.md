@@ -22,9 +22,10 @@ Make sure nodejs is installed
 
 ```json
 {
-    "ignore": "quotes.json"
+    "ignore": "data"
 }
 ```
 ## List of websites scraped for data
 
 1. https://fictionhorizon.com/best-anime-quotes/
+2. https://www.goalcast.com/anime-quotes/
