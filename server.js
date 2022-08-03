@@ -24,8 +24,10 @@ axios(URI1).then(response => {
     $('.wp-block-quote')
         .each(
             function() {
-                const quote = $(this).find('p').text();
-                const author = $(this).find('cite').text();
+                let quote = $(this).find('p').text();
+                let author = $(this).find('cite').text();
+                quote = quote.trim()
+                author = author.trim()
                 quotes.push({
                     quote, author
                 });
@@ -51,8 +53,12 @@ axios(URI2).then(response => {
     $('.wp-block-quote')
     .each(
         function(){
-            const quote = $(this).find('p').text()
-            const author = $(this).find('cite').text()
+            let quote = $(this).find('p').text()
+            let pAuthor = $(this).find('cite').text()
+            quote = `“${quote}”`
+            quote = quote.trim()
+            pAuthor = pAuthor.trim()
+            const author = `- ${pAuthor}`
             quotes.push({quote,author})
         }
     )
